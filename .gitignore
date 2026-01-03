@@ -1,0 +1,13 @@
+# Rust
+/target
+Cargo.lock
+
+# WASM / Yew / Trunk
+/pkg
+/dist
+
+# IDE / Editor
+.idea
+.vscode
+*.swp
+.DS_Store
