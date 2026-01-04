@@ -4,7 +4,7 @@ Cargo.lock
 
 # WASM / Yew / Trunk
 /pkg
-/dist
+# /dist
 
 # IDE / Editor
 .idea
