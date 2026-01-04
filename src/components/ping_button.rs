@@ -21,6 +21,8 @@ pub fn ping_button(props: &PingButtonProps) -> Html {
     };
 
     html! {
-        <button onclick={on_click}>{ format!("Ping {}", props.url) }</button>
+        <div class="flex-container">
+        <button class="btn btn-primary" onclick={on_click}>{ format!("Ping {}", props.url) }</button>
+        </div>
     }
 }

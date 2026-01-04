@@ -9,10 +9,12 @@ pub struct PingListProps {
 #[function_component(PingList)]
 pub fn ping_list(props: &PingListProps) -> Html {
     html! {
-        <ul>
-            { for props.results.iter().map(|r| html!{
-                <li>{ format!("{} → {:.2} ms", r.url, r.duration_ms) }</li>
-            }) }
-        </ul>
+        <div class="flex-container">
+            <ul>
+                { for props.results.iter().map(|r| html!{
+                    <li class="list-item">{ format!("{} → {:.2} ms", r.url, r.duration_ms) }</li>
+                }) }
+            </ul>
+        </div>
     }
 }

@@ -22,7 +22,9 @@ pub fn App() -> Html {
 
     html! {
         <div>
+            <div class="header">
             <h1>{ "WASM Ping App" }</h1>
+            </div>
             <PingButton url={"https://example.com"} on_ping={add_result.clone()} />
             <PingList results={(*results).clone()} />
         </div>
