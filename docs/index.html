@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/napp/styles-d7e71385f46074b0.css" integrity="sha384-tWABfMiFSnNQcxDDTMrb0UplBzZn5A9nmB3t41Rl2J8ZP0XyQso5iNe+/3YuWvcg"/>
+    <title>Napp</title>
+  <link rel="modulepreload" href="/napp/napp-5bad45712b73b03.js" crossorigin="anonymous" integrity="sha384-MGNMDnyjDM8nKkjbRtJMhqaXk0bc3bG5Z7hx7wNzRvd0zkIKZp9jE1YtEnILzjrL"><link rel="preload" href="/napp/napp-5bad45712b73b03_bg.wasm" crossorigin="anonymous" integrity="sha384-szxZQjXRzFcgvzHcynWQzWf2YTBfo+XsCEfbjuHsYY+JzLC/x98/QxJYzWZzl7K5" as="fetch" type="application/wasm"></head>
+  <body>
+    <div id="app"></div>
+  
+<script type="module">
+import init, * as bindings from '/napp/napp-5bad45712b73b03.js';
+const wasm = await init({ module_or_path: '/napp/napp-5bad45712b73b03_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
